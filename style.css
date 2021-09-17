@@ -1,0 +1,45 @@
+body, html {
+    height: 100%;
+    /* background-blend-mode: lighten;
+    background-image: url('./assets/background.gif');
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover; */
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+.backgroundImage {
+    background-image: url('./assets/background.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+    height: 100%;
+    -webkit-filter: blur(8px); /* for macs */
+
+  }
+
+#searchDiv {
+    left: 50%;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#SGSearch {    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+#searchButtons {
+    display: flex;
+    flex-direction: row;
+    margin-top: -100px;
+    /* flex */
+}

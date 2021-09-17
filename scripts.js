@@ -1,1 +1,1 @@
-// Javascript code.
+const StudioAPI = 'https://ghibliapi.herokuapp.com';
