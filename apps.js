@@ -1,4 +1,4 @@
-//GLOBAL VARIABLES
+//GLOBAL VARIABLES /* random update for august 21, 2021 class */
 // API URL
 const charURL = 'https://ghibliapi.herokuapp.com/people';
 const filmURL = 'https://ghibliapi.herokuapp.com/films';
