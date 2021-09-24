@@ -14,19 +14,21 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<div  class="backgroundImage"></div>   
-   
-<div id='searchDiv'>
-    <img id = 'SGSearch' img src = './assets/StudioGhibliSearch.png' alt = 'Studio Ghibli Search'></id>
-    <div id = 'searchButtons'>
-        <img id = 'charSearch' img src = './assets/Characters.png' alt = 'Characters Search'></id>
-        <img id = 'filmSearch' img src = './assets/Films.png' alt = 'Films Search'></id>
-        <img id = 'locSearch' img src = './assets/Quotes.png' alt = 'Quotes Search'></id>
+    <div  class="backgroundImage">  </div> 
+
+    <div class='searchDiv'>
+        <!-- main image that will be removed in JS line #### -->
+        <img id = 'SGSearch' img src = './assets/StudioGhibliSearch.png' alt = 'Studio Ghibli Search logo'></id>
+        <!-- search button -->
+        <input type="image" onclick="newFilm()" id = 'newFilm' img src = './assets/findAfilm.png' alt = 'Search for a Film'></id>
+        <!-- pulling in search -->
+        <div id=theSearchID>
+            <div id='buttonClick' class='bcInfo'></div>
+            <div id='filmInfo' class='bcInfo'></div>
+        </div>
     </div>
-</div>
 <!-- random update for august 21, 2021 class -->
 <!-- Javascript Inserted Below -->
 <script src="./apps.js"></script>    
 </body>
-
 </html>
