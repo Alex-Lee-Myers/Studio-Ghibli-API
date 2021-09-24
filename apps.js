@@ -3,9 +3,9 @@
 const filmURL = 'https://ghibliapi.herokuapp.com/films';
 
 // Call and use pre-existing HTML elements (main/section)
-let filmID = document.querySelector("#newFilm");
 const filmInfo = document.getElementById('#filmInfo');
 const bcInfo = document.getElementsByClassName('.bcInfo');
+//const theSearchID = document.querySelector('#theSearchID'); //just to show different ways to grab HTML elements
 
 // Creating the fetch to grab data
 let newFilm = () => {
@@ -16,12 +16,12 @@ fetch(filmURL)
 }
 
 let filmDisplay = (data) => {
-    while(bcInfo.firstChild) {
-        bcInfo.removeChild(bcInfo.firstChild);
+    while(bcInfo.firstChild) { // then remove that child
+        bcInfo.removeChild(bcInfo.firstChild); // then remove that child
     }
 
-    while(buttonClick.firstChild) { //if it has a first child
-        buttonClick.removeChild(buttonClick.firstChild); //then remove that child
+    while(buttonClick.firstChild) { // then remove that child
+        buttonClick.removeChild(buttonClick.firstChild); // then remove that child
     }
 
     //random array values
@@ -32,21 +32,25 @@ let filmDisplay = (data) => {
     //Create elements for random array pull
     let titleOfFilm = document.createElement('h1');
     let jpnTitle = document.createElement('h3');
-    let directorOfFilm = document.createElement('h3');
-    let descriptionOfFilm = document.createElement('p');
+    let dirOfFilm = document.createElement('h3');
+    let descOfFilm = document.createElement('p');
     let rtScore = document.createElement('h3');
     let releaseDate = document.createElement('h3');
     
+    //add more attributes to the new created elements
+    jpnTitle.id = 'jpnTitle';
+    dirOfFilm.id = 'dirOfFilm';
+    descOfFilm.id = 'descOfFilm';
+    rtScore.id = 'rtScore';
+    releaseDate.id = 'releaseDate';
 
     //give data
-
-    titleOfFilm.innerText = `${theArray.title}`;   
+    titleOfFilm.innerText = `${theArray.title}`;
     jpnTitle.innerText = `${theArray.original_title}`;
-    directorOfFilm.innerText = `Director: ${theArray.director}`; //stretch goal is italizing the calling in element
-    descriptionOfFilm.innerText = `${theArray.description}`;
+    dirOfFilm.innerText = `Director: ${theArray.director}`; //stretch goal is italizing the calling in element
+    descOfFilm.innerText = `${theArray.description}`;
     rtScore.innerText = `RottenTomatoe's Score: ${theArray.rt_score}`; //stretch goal is italizing the calling in element
     releaseDate.innerText = `Release Year: ${theArray.release_date}`; 
-    
     
     // STRETCH GOAL
     // 1.) remove the main image on click
@@ -59,12 +63,11 @@ let filmDisplay = (data) => {
     //     SGSreplace.remove; //then remove that child
     // }
 
-    //append the above to HTML to display
+    //append below to HTML to display
     buttonClick.appendChild(titleOfFilm);
     buttonClick.appendChild(jpnTitle);
-    buttonClick.appendChild(directorOfFilm);
-    buttonClick.appendChild(descriptionOfFilm);
-    buttonClick.appendChild(rtScore);
-    buttonClick.appendChild(releaseDate);
-    
+    buttonClick.appendChild(dirOfFilm);
+    buttonClick.appendChild(descOfFilm);
+    // buttonClick.appendChild(rtScore);
+    // buttonClick.appendChild(releaseDate);
 }
